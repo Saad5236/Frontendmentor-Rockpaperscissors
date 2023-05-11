@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="app.css" />
+  </head>
+
+  <body>
+    <section class="rpsApp">
+      <header>
+        <section>
+          <img src="Content/images/logo.svg" srcset="" />
+          <div class="scoreBox">
+            <div class="scoreText">SCORE</div>
+            <div class="scoreNumber"></div>
+          </div>
+        </section>
+      </header>
+
+      <section class="btnsSection">
+        <div class="topBtnsSection">
+          <div class="btnOutline paperBtnOutline" id="paperBtn">
+            <div class="btnInner paperBtnInner">
+              <img src="Content/images/icon-paper.svg" alt="" srcset="" />
+            </div>
+          </div>
+
+          <div class="btnOutline scissorBtnOutline" id="scissorBtn">
+            <div class="btnInner scissorBtnInner">
+              <img src="Content/images/icon-scissors.svg" alt="" srcset="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="bottomBtnsSection">
+          <div class="btnOutline rockBtnOutline" id="rockBtn">
+            <div class="btnInner rockBtnInner">
+              <img src="Content/images/icon-rock.svg" alt="" srcset="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <a href="#"> RULES </a>
+      </footer>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>

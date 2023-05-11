@@ -1,0 +1,395 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+
+  background-image: radial-gradient(
+    circle at top,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+}
+
+header section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid hsl(217, 16%, 45%);
+  border-radius: 0.8em;
+  width: 38em;
+  padding: 1em;
+}
+
+header section .scoreBox {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3em 3em;
+  padding-top: 0.9em;
+  border-radius: 0.5em;
+}
+
+header section .scoreBox .scoreNumber {
+  font-size: 4em;
+  color: hsl(229, 25%, 31%);
+  font-weight: 700;
+  height: auto;
+}
+
+header section .scoreBox .scoreText {
+  color: hsl(229, 64%, 46%);
+  /* font-weight: 600; */
+  letter-spacing: 2px;
+}
+
+/* BUTTONS */
+/* box-shadow: 0px 10px 20px lightblue inset;
+  border-radius: 50%; */
+.btnsSection {
+  background-image: url(Content/images/bg-triangle.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3em;
+}
+
+.btnsSection .topBtnsSection {
+  display: flex;
+  justify-content: space-between;
+  width: 23em;
+  margin-bottom: 2em;
+  /* border: 3px solid white; */
+}
+
+.btnsSection .bottomBtnsSection {
+  margin-bottom: 2.5em;
+}
+
+.btnInner {
+  background-color: white;
+  /* padding: 2em; */
+  width: 7em;
+  height: 7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0px 5px 2px rgb(170, 170, 170) inset;
+  border-radius: 50%;
+}
+
+.btnOutline {
+  border-radius: 50%;
+  /* padding: 1.2em; */
+  width: 9.4em;
+  height: 9.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paperBtnOutline {
+  background-image: linear-gradient(hsl(230, 89%, 62%), hsl(230, 92%, 63%));
+  box-shadow: 0px -6px 1px hsl(230, 90%, 56%) inset;
+}
+
+.scissorBtnOutline {
+  background-image: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  box-shadow: 0px -6px 1px hsl(40, 94%, 35%) inset;
+}
+
+.rockBtnOutline {
+  background-image: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  box-shadow: 0px -6px 1px hsl(349, 90%, 39%) inset;
+}
+
+/* _________FOOTER BUTTON__________ */
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 3em 3em 0;
+  margin-top: 2em;
+}
+
+footer a {
+  color: #f6f6f6;
+  border: 2px solid #f6f6f6;
+  letter-spacing: 3px;
+  padding: 0.5em 2.2em;
+  border-radius: 0.5em;
+  /* margin: 0 3em 3em 0; */
+  transition: 0.3s;
+}
+
+footer a:hover {
+  background-color: #f6f6f6;
+  color: hsl(229, 64%, 46%);
+  border: none;
+  border: 2px solid #f6f6f6;
+}
+
+.rulesBoxBgOverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rulesBox {
+  background-color: #f6f6f6;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+}
+
+.rulesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  margin-bottom: 2.5em;
+}
+
+.closeRulesBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rulesHeaderText {
+  font-size: 1.8em;
+  color: hsl(229, 25%, 31%);
+  font-weight: 700;
+}
+
+.rulesImg {
+  width: 90%;
+}
+
+/* -----Stage 2 (CODE FROM JS)----- */
+
+.newStage,
+.newStageBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newStage {
+  margin-top: 4em;
+}
+
+.yourPickBox,
+.computerPickBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.yourPickBox {
+  margin-right: 2em;
+}
+.computerPickBox {
+  margin-left: 2em;
+}
+
+.yourPickTitle,
+.computerPickTitle {
+  margin-bottom: 3em;
+  color: #f6f6f6;
+  font-size: 1.1em;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 5px black;
+}
+
+.yourClickedBtn,
+.computerClickedBtn {
+  width: 14.5em;
+  height: 14.5em;
+}
+
+.yourClickedBtn .btnInner,
+.computerClickedBtn .btnInner {
+  width: 11em;
+  height: 11em;
+  box-shadow: 0px 8px 2px rgb(170, 170, 170) inset;
+}
+
+.yourClickedBtn .btnInner img,
+.computerClickedBtn .btnInner img {
+  width: 45%;
+}
+
+.decisionBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2.5em;
+  color: #f6f6f6;
+}
+
+.decisionText {
+  font-size: 3em;
+}
+
+.playAgainBtn {
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 1em;
+  color: hsl(229, 25%, 31%);
+  border: 2px solid #f6f6f6;
+  background-color: #f6f6f6;
+  letter-spacing: 3px;
+  padding: 0.5em 2.6em;
+  border-radius: 0.5em;
+  transition: 0.3s;
+}
+
+.playAgainBtn:hover {
+  color: red;
+}
+
+.winnerBtn {
+  box-shadow: 0 0 0 40px #293251, 0 0 0 80px #232c4b, 0 0 0 130px #1e2949;
+}
+
+@media (max-width: 450px) {
+  .rpsApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    width: 90%;
+  }
+
+  header section img {
+    width: 7em;
+  }
+
+  header section .scoreBox {
+    padding: 0.3em 1em;
+    border-radius: 0.3em;
+  }
+
+  header section .scoreBox .scoreNumber {
+    font-size: 2em;
+  }
+
+  .btnsSection {
+    background-size: 12em;
+    margin-top: 6em;
+  }
+
+  .btnsSection .topBtnsSection {
+    margin-bottom: 0.6em;
+    width: 19em;
+  }
+
+  .btnsSection .bottomBtnsSection {
+    margin-bottom: 2.5em;
+  }
+
+  .btnInner {
+    width: 6em;
+    height: 6em;
+  }
+
+  .btnOutline {
+    width: 8em;
+    height: 8em;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    padding-right: 0;
+    margin-top: 4em;
+  }
+
+  /* SECOND STAGE */
+  .yourPickBox {
+    margin-right: 1em;
+  }
+
+  .yourPickTitle,
+  .computerPickTitle {
+    margin-bottom: 0;
+    margin-top: 1.5em;
+    font-size: 0.8em;
+  }
+
+  .computerPickBox {
+    margin-left: 1em;
+  }
+
+  .decisionBox {
+    margin-top: 3em;
+  }
+
+  .rulesBoxBgOverlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rulesBox {
+    justify-content: space-between;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .rulesHeaderText {
+    margin-top: 2.5em;
+  }
+
+  .rulesImg {
+    width: 90%;
+  }
+
+  .closeRulesBtn {
+    margin-bottom: 3em;
+  }
+}
